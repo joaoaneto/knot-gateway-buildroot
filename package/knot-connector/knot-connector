@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Run KNoT-connector
+#
+
+NODE_ENV=production npm start &
+echo $! > /tmp/knot-connector.pid
+
+PIDFILE=/tmp/knot-connector.pid
+PID=`cat $PIDFILE`
+
+while [ -e /proc/$PID ]
+do
+	sleep 1
+done

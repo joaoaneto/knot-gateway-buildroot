@@ -1,0 +1,5 @@
+config BR2_PACKAGE_KNOT_CONNECTOR
+	bool "knot-connector"
+	depends on BR2_PACKAGE_NODEJS
+	help
+	  TODO
