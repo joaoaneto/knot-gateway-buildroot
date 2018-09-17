@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MESHBLU_WORKER_WEBHOOK
+	bool "meshblu-worker-webhook"
+	depends on BR2_PACKAGE_MESHBLU_DISPATCHER
+	help
+	  Wireless Network Interface Daemon for Low-Power Wireless SoCs

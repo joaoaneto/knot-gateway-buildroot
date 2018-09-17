@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# Start Meshblu Adapter Websocket
+#
+
+start() {
+        printf "Starting Meshblu Adapter Websocket: "
+        if /etc/knot/start.sh meshblu-websocket
+        then
+          echo "OK"
+        else
+          echo "FAIL"
+        fi
+}
+
+stop() {
+        printf "Stopping Meshblu Adapter Websocket: "
+        if /etc/knot/stop.sh meshblu-websocket
+        then
+          echo "OK"
+        else
+          echo "FAIL"
+        fi
+}
+
+restart() {
+        stop
+        start
+}
+
+
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

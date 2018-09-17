@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# Start Meshblu Adapter HTTP
+#
+
+start() {
+        printf "Starting Meshblu Adapter HTTP: "
+        if /etc/knot/start.sh meshblu-http
+        then
+          echo "OK"
+        else
+          echo "FAIL"
+        fi
+}
+
+stop() {
+        printf "Stopping Meshblu Adapter HTTP: "
+        if /etc/knot/stop.sh meshblu-http
+        then
+          echo "OK"
+        else
+          echo "FAIL"
+        fi
+}
+
+restart() {
+        stop
+        start
+}
+
+
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

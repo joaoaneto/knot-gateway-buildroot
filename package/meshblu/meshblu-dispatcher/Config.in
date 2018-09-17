@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MESHBLU_DISPATCHER
+	bool "meshblu-dispatcher"
+	depends on BR2_PACKAGE_MESHBLU
+	help
+	  Meshblu core message broker

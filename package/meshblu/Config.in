@@ -1,0 +1,14 @@
+menuconfig BR2_PACKAGE_MESHBLU
+	bool "Meshblu"
+	select BR2_PACKAGE_MONGODB
+	select BR2_PACKAGE_REDIS
+	select BR2_PACKAGE_MESHBLU_DISPATCHER
+
+if BR2_PACKAGE_MESHBLU
+	source "package/meshblu/meshblu-dispatcher/Config.in"
+
+	source "package/meshblu/meshblu-adapter-http/Config.in"
+
+	source "package/meshblu/meshblu-adapter-websocket/Config.in"
+
+endif

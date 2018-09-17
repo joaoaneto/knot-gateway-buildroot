@@ -2116,4 +2116,8 @@ menu "OpenThread"
 	source "package/wpantund/Config.in"
 endmenu
 
+menu "Meshblu"
+	source "package/meshblu/Config.in"
+endmenu
+
 endmenu
