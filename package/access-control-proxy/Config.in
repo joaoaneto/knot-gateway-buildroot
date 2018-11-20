@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ACCESS_CONTROL_PROXY
+	bool "access-control-proxy"
+	depends on BR2_PACKAGE_NODEJS
+	help
+	  TODO

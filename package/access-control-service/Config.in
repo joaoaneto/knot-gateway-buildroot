@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ACCESS_CONTROL_SERVICE
+	bool "access-control-service"
+	depends on BR2_PACKAGE_NODEJS
+	help
+	  TODO

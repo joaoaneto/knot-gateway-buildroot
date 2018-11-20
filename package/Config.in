@@ -2112,6 +2112,11 @@ menu "KNoT"
 	source "package/lora-pkt-forwarder/Config.in"
 endmenu
 
+menu "AccessControl"
+	source "package/access-control-service/Config.in"
+	source "package/access-control-proxy/Config.in"
+endmenu
+
 menu "OpenThread"
 	source "package/wpantund/Config.in"
 endmenu

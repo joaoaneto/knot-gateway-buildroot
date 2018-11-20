@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Run access-control-service
+#
+
+cd /usr/local/bin/access-control-service/
+NODE_ENV=production npm start &
+echo $! > /tmp/access-control.pid
+
+PIDFILE=/tmp/access-control.pid
+PID=`cat $PIDFILE`
+
+while [ -e /proc/$PID ]
+do
+	sleep 1
+done
