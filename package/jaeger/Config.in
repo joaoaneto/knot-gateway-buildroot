@@ -1,0 +1,11 @@
+config BR2_PACKAGE_JAEGER
+	bool "jaeger"
+	depends on BR2_PACKAGE_HOST_GO_ARCH_SUPPORTS
+	depends on BR2_PACKAGE_HOST_GO_CGO_LINKING_SUPPORTS
+	help
+      Jaeger, inspired by Dapper and OpenZipkin, is a distributed
+      tracing system released as open source by Uber Technologies
+      and written in Go. It is used for monitoring and
+      troubleshooting microservices-based distributed systems.
+
+	  https://github.com/jaegertracing/jaeger
