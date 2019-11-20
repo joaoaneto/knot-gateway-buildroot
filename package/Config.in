@@ -2112,6 +2112,7 @@ menu "KNoT"
 	source "package/knot-web/Config.in"
 	source "package/knot-netsetup/Config.in"
 	source "package/knot-control/Config.in"
+	source "package/knot-babeltower/Config.in"
 	source "package/lora-gateway/Config.in"
 	source "package/lora-pkt-forwarder/Config.in"
 endmenu

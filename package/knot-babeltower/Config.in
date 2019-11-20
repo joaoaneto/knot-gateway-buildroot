@@ -1,0 +1,13 @@
+config BR2_PACKAGE_KNOT_BABELTOWER
+	bool "babeltower"
+    depends on BR2_PACKAGE_HOST_GO_ARCH_SUPPORTS
+    depends on BR2_PACKAGE_HOST_GO_CGO_LINKING_SUPPORTS
+    depends on BR2_PACKAGE_RABBITMQ
+	help
+		The babeltower aims orchestrate the communication with the fog
+		services, acting both as a proxy and a protocol translator since
+		the internal operations can be made to services that support
+		different application protocols. The devices that support IP
+		connectivity can connect directly to it.
+
+	  https://github.com/CESARBR/knot-babeltower
